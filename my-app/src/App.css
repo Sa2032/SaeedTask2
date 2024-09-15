@@ -1,0 +1,163 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.Text {
+  font-family: Roboto;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  text-align: center;
+  margin-bottom: 150px;
+  margin-top: -100px;
+}
+.image-container-x{
+  position: relative;
+  display: inline-block;
+}
+.choice-img {
+  display: block;
+}
+.rock-shadow, .paper-shadow, .scissors-shadow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: -1; /* Keeps shadow behind the image */
+}
+.App-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.choice-image {
+  display: block;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.choice-image-rock {
+  width: 246px;
+  height: 198.39px;
+}
+
+.rock-shadow {
+  position: absolute;
+  margin-top: -30px;
+  width: 273px;
+  height: 17px;
+}
+
+.choice-image-paper {
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 166px;
+  height: 231.73px;
+}
+
+.paper-shadow {
+  position: absolute;
+  width: 243px;
+  height: 17px;
+  margin-top: -20px;
+}
+
+.choice-image-scissors {
+  width: 242px;
+  height: 254.78px;
+}
+
+.scissors-shadow {
+  position: absolute;
+  width: 216px;
+  height: 17px;
+  margin-top: -20px;
+}
+
+.choice-image:hover {
+  transform: scale(1.1);
+}
+
+.Results-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.Result-item {
+  text-align: center;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+
+.shadow {
+  position: absolute;
+  bottom: -10px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: -1; /* Places shadow behind the image */
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  
+  .choice-image{
+    margin-bottom: -60px;
+  }
+ .choice-img{
+  width: 50%;
+  margin-top: 30px;
+  margin-left: 25%;
+ }
+ .rock-shadow {
+  width: 50%;
+  
+ }
+ .paper-shadow {
+  width: 50%;
+  
+ }
+ .scissors-shadow{
+  width: 50%;
+ 
+ }
+
+ 
+  .Text {
+    margin-top: 50px;
+    margin-bottom:50px;
+    font-size: 40px;
+  }
+  .Results-container {
+    flex-direction: column;
+    gap: 20px;
+    
+  }
+  .App-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .shadow{
+    width: 50%;
+  }
+  .result-image{
+    
+    width: 50%;
+  }
+}
